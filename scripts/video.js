@@ -1,23 +1,24 @@
-let currentVideoIndex = 0;
-const videos = document.querySelectorAll("div.video");
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".myVideo");
+  let index = 0;
 
-// Function to swap videos
-function swapVideos() {
-  // Remove the 'visible' class from the current video and pause it
-  videos[currentVideoIndex].classList.remove("visible");
-  videos[currentVideoIndex].pause();
+  function showNextVideo() {
+    videos.forEach((video, i) => {
+      if (i === index) {
+        video.currentTime = 0;
+        video.style.opacity = "1";
+        video.style.visibility = "visible";
+        video.play(); // Varmistetaan, että video jatkaa pyörimistään
+      } else {
+        video.style.opacity = "0";
+        video.style.visibility = "hidden";
+      }
+    });
 
-  // Update the current video index to show the next video (looping)
-  currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    console.warn("Näkyvä video:", videos[index].id);
+    index = (index + 1) % videos.length;
+  }
 
-  // Add the 'visible' class to the next video and play it
-  videos[currentVideoIndex].classList.add("visible");
-  videos[currentVideoIndex].play();
-}
-
-// Initial setup: make the first video visible and play it
-videos[0].classList.add("visible");
-videos[0].play();
-
-// Swap the videos every 6 seconds
-setInterval(swapVideos, 6000); // Adjust the time as needed (in milliseconds)
+  setInterval(showNextVideo, 6000);
+  showNextVideo();
+});

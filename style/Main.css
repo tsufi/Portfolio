@@ -1,6 +1,7 @@
 /*Tyyli*/
 body {
   color: rgb(0, 0, 0);
+  background-color: rgb(255, 128, 0);
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -114,9 +115,8 @@ body {
   background: #00c6ff;
 }
 
-/* animoitu video tausta */
-body,
-html {
+html,
+body {
   margin: 0;
   height: 100%;
   overflow: hidden;
@@ -129,23 +129,23 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: -1; /* Ensure video is behind the content */
+  z-index: -1; /* Videot taustalle */
 }
 
-.video {
+.myVideo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0; /* Start videos as invisible */
-  transition: opacity 1s ease-in-out; /* Smooth opacity transition */
-  pointer-events: none; /* Prevent interaction with the video */
+  opacity: 0; /* Kaikki videot alkavat piilossa */
+  visibility: hidden;
+  transition: background-color opacity 1s ease-in-out;
 }
 
-.video.visible {
-  opacity: 1; /* Show the visible video */
-  pointer-events: auto; /* Allow interaction with the visible video */
+/* Näkyvä video */
+.myVideo.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
 }

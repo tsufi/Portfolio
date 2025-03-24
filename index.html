@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <html lang="fi">
   <head>
-    <!-- more on style/main.css-->
     <title>Portfolio Tsufi</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="style/Main.css" />
   </head>
   <body>
+    <div id="tiles" class="tile-container"></div>
     <div class="navbar">
       <a href="index.html">Home</a>
       <a href="other/Peli/game.html"
@@ -20,8 +20,6 @@
       <a href="#">Coming Soon</a>
       <a href="contact.html">Contact</a>
     </div>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/video.js"></script>
     <div>
       <h1>Welcome to my portfolio</h1>
       <p>
@@ -30,16 +28,35 @@
     </div>
 
     <div class="video-background">
-      <video id="video1" class=".video" autoplay loop muted>
-        <source src="vid/Firework.mp4" type="video/mp4" />
-      </video>
-      <video id="video2" class=".video" autoplay loop muted>
-        <source src="vid/nothenlights.mp4" type="video/mp4" />
-      </video>
-      <video id="video3" class=".video" autoplay loop muted>
-        <source src="vid/valley.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay"></div>
+      <video
+        src="vid/Firework.mp4"
+        id="video1"
+        class="myVideo"
+        autoplay
+        muted
+      ></video>
+      <video
+        src="vid/nothenlights.mp4"
+        id="video2"
+        class="myVideo"
+        autoplay
+        muted
+      ></video>
+      <video
+        src="vid/valley.mp4"
+        id="video3"
+        class="myVideo"
+        autoplay
+        muted
+      ></video>
     </div>
+    <!--
+    <div class="tile-container"></div>
+    -->
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/video.js"></script>
+    <!--
+    <script src="scripts/laatta.js"></script>
+    -->
   </body>
 </html>
