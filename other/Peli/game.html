@@ -92,6 +92,56 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="game.icon.png" />
 <link rel="apple-touch-icon" href="game.apple-touch-icon.png"/>
+<link rel="manifest" href="game.manifest.json">
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<meta name="description" content="learning site" />
+<meta name="keywords" content="HTML, CSS, JavaScript" />
+<meta name="author" content="Tsufi" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="fi">
+  <head>
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="style/Main.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/index.html">Home</a>
+      <a href="/other/Peli/game.html"
+        >Tekstiilin lajittelu peli - saimaan virta</a
+      >
+      <a href="#">Coming Soon</a>
+      <a href="/Contact.html">Contact</a>
+    </div>
+    <script src="/scripts/menu.js"></script>
+    <div class="video-background">
+      <video
+        src="vid/Firework.mp4"
+        id="video1"
+        class="myVideo"
+        autoplay
+        muted
+      ></video>
+      <video
+        src="vid/nothenlights.mp4"
+        id="video2"
+        class="myVideo"
+        autoplay
+        muted
+      ></video>
+      <video
+        src="vid/valley.mp4"
+        id="video3"
+        class="myVideo"
+        autoplay
+        muted
+      ></video>
+    </div>
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/video.js"></script>
+  </body>
+</html>
 
 	</head>
 	<body>
@@ -111,7 +161,7 @@ body {
 
 		<script src="game.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"game","experimentalVK":false,"fileSizes":{"game.pck":15208656,"game.wasm":43682606},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"game","experimentalVK":false,"fileSizes":{"game.pck":15208672,"game.wasm":43682606},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"game.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
