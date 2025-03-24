@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         video.style.visibility = "hidden";
       }
     });
-
-    console.warn("Näkyvä video:", videos[index].id);
     index = (index + 1) % videos.length;
   }
 
