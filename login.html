@@ -13,17 +13,26 @@
   <body>
     <div class="navbar">
       <a href="/index.html">Home</a>
-      <a href="other/Peli/game.html"
+      <a href="/other/Peli/game.html"
         >Tekstiilinlajittelu peli - SaimaanVirta ry</a
       >
       <a href="/login.html">Login</a>
       <a href="/Contact.html">Contact</a>
     </div>
     <div class="contact-box">
-      <h1>Welcome to my portfolio</h1>
-      <p>
-        you can find what i have done here i hope so i get somethings here soon
-      </p>
+      <h2>Login</h2>
+      <form id="contactform" action="php/login.php" method="post">
+        <div class="input-box">
+          <input type="text" name="username" required />
+          <label for="Email">Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" name="password" required />
+          <label for="password">password</label>
+        </div>
+        <button type="submit" id="submit" class="btn">Login</button>
+      </form>
+      <p id="response-message"></p>
     </div>
 
     <div class="video-background">
