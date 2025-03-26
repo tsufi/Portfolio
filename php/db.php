@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db   = 'login_system';
-$user = 'root'; // Change as needed
-$pass = 'JLRnt79U9FKYI1I1myGQpGESvmK3f4HLEl3fmVEhBlMHxOXoptGh3Zz3wzqaOKuT'; // Change if you have a password
+$db   = 'loginsystem';
+$user = 'site'; // Change as needed
+$pass = '1l3mdtkrabGiGqJc8UwB'; //ve a password
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {

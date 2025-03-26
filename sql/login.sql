@@ -1,5 +1,5 @@
-CREATE DATABASE login_system;
-USE login_system;
+CREATE DATABASE loginsystem;
+USE loginsystem;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
